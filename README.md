@@ -9,12 +9,12 @@ I created this plugin as we forgot to update the SMTP details for our testing en
 The `.env` file overrides settings _at runtime_. If you go and view `System Settings` in the manager, you will not see the `.env` changes.
 **This is confusing**. Unfortunately, short of _destructively changing_ the values in the database (overwriting them with the `.env` values) there appears to be no work-around.
 
-**Update** Event `OnSiteSettingsRender` may do what's needed... to be investigated unless some kind soul sends me a [Pull Request]()
+**Update** Event `OnSiteSettingsRender` may do what's needed... to be investigated unless some kind soul sends me a [Pull Request](https://github.com/pbowyer/modx-dotenv/pulls)
 
 ## Installation
 
-  1. ~~Install the plugin from the MODX Package Manager and activate it.~~
-     Clone this repository and put it in the `core/components` directory (this file should be located at `core/components/dotenv/README.md`)
+  1. [Install the plugin from the MODX Package Manager](https://modx.com/extras/package/dotenv) and activate it.  
+     _Alternatively, clone this repository and put it in the `core/components` directory (this file should be located at `core/components/dotenv/README.md`)_
 
      Go to your MODX Manager, create a new plugin, and point it to the static file `core/components/dotenv/plugin.php`. Enable it for the `OnMODXInit` event.
 
@@ -46,10 +46,13 @@ The `.env` file overrides settings _at runtime_. If you go and view `System Sett
      ```
      [Check this guide]() for the syntax rules allowed in `.env`.
 
-     You can use placeholders like:
+     You can use existing System Settings within your settings, like:
      ```bash
      site_name="SAY ${emailsubject}"
      ```
      Any System Settings can be used (which are in `$modx->config`, not just settings further up the `.env` file.
 
   1. Check it works by clearing your site's cache and browsing to a page, looking at the changed title tag (if you use the sample files above)
+  
+  # Thanks
+  This extra is brought to you by the MODX experts at [Maple Design](http://www.mapledesign.co.uk/services/s/content-management-systems/modx-development/).
