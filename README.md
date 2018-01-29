@@ -14,9 +14,13 @@ The `.env` file overrides settings _at runtime_. If you go and view `System Sett
 ## Installation
 
   1. [Install the plugin from the MODX Package Manager](https://modx.com/extras/package/dotenv) and activate it.  
-     _Alternatively, clone this repository and put it in the `core/components` directory (this file should be located at `core/components/dotenv/README.md`)_
+  
+### Alternative: installing from this repository
+1. Clone this repository and put it in the `core/components` directory (this file should be located at `core/components/dotenv/README.md`)
 
-     Go to your MODX Manager, create a new plugin, and point it to the static file `core/components/dotenv/plugin.php`. Enable it for the `OnMODXInit` event.
+1. Go to your MODX Manager, create a new plugin, and point it to the static file `core/components/dotenv/plugin.php`. Enable it for the `OnMODXInit` event.
+
+## Using DotEnv with MODX
 
   1. Create a `.env` file at `core/config/.env`
 
